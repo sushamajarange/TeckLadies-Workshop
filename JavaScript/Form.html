@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<Html>
+
+<head>
+    <title>
+        Registration Page
+    </title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        input[type=text],
+        input[type=email],
+        input[type=password],
+        select,
+        textarea {
+            width: 70%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        label {
+            width: 20%;
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+
+        input[type=submit] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            width: 60%;
+            margin: auto;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+
+        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+
+            .col-25,
+            .col-75,
+            input[type=submit] {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body class="container">
+    <br>
+    <br>
+    <form name="myform" method="post" action="Action_page.php" onsubmit="return validateform()">
+
+        <label> Firstname </label>
+        <input type="text" name="firstname" size="15" /> <br> <br>
+        <label> Middlename: </label>
+        <input type="text" name="middlename" size="15" /> <br> <br>
+        <label> Lastname: </label>
+        <input type="text" name="lastname" size="15" /> <br> <br>
+        <label>
+            Phone :
+        </label>
+        <input type="text" name="phone" size="10" /> <br> <br>
+
+        <label>
+            Course :
+        </label>
+        <select>
+            <option value="Course">Course</option>
+            <option value="BCA">BCA</option>
+            <option value="BBA">BBA</option>
+            <option value="B.Tech">B.Tech</option>
+            <option value="MBA">MBA</option>
+            <option value="MCA">MCA</option>
+            <option value="M.Tech">M.Tech</option>
+        </select>
+
+        <br>
+        <br>
+        <label>Email:</label>
+        <input type="email" id="email" name="email" /> <br>
+        <br>
+        <label>Password:</label>
+        <input type="Password" id="pass" name="pass"> <br>
+        <br>
+        <label>Re-type password:</label>
+        <input type="Password" id="repass" name="repass"> <br> <br>
+        <label>
+            Gender :
+        </label>
+        <input type="radio" name="male" /> Male
+        <input type="radio" name="female" /> Female
+        <input type="radio" name="other" /> Other
+        <br>
+        <br>
+        <label>Address</label>
+        <textarea cols="80" rows="2" value="address" placeholder="type here your address"></textarea>
+        <br>
+        <p><input type="submit" value="Submit" /></p>
+    </form>
+</body>
+<script>
+    function validateform() {
+        var name = document.myform.firstname.value;
+        var password = document.myform.pass.value;
+
+        if (name == null || name == "") {
+            alert("Please Enter FirstName");
+            return false;
+        } else if (password.length < 6) {
+            alert("Password must be at least 6 characters long.");
+            return false;
+        }
+    }  
+</script>
+
+</html>

@@ -1,0 +1,32 @@
+<html>
+
+<head>Javascript Events
+    <link rel="stylesheet" href="myStyle.css">
+</head>
+</br>
+
+<body onload="window.alert('Page successfully loaded');">
+    <div class="content">
+        <script>
+      //  document.write("The page is loaded successfully");  
+        </script>
+        <h2> Enter User Name</h2>
+        <p id="txt"></p>
+        <input type="text" id="input1" onfocus="focusevent()" />
+        <br>
+        <input type="button" value="submit" onclick="clickevent()" />
+
+    </div>
+</body>
+
+<script>
+    function focusevent() {
+        document.getElementById("input1").style.background = "skyblue";
+    }
+    function clickevent() {
+        var name = document.getElementById("input1").value;
+        document.write("Welcome " + name);
+    } 
+</script>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="myStyle.css">
+
+</head>
+
+<body>
+    <div class="content">
+        <h2>JavaScript Variables Example</h2>
+        <p id="demo"></p>
+        <p id="x"></p>
+        <p id="y"></p>
+        <p id="pi"></p>
+
+        <script>
+            var x = 5;
+            // var x = 3; can redefine the variable value if it is declared with keyword 'var'
+            let y = 3;
+            // let y = 12.9; //cannot redefine the value if it is decalred with keyword 'let'
+            const Pi = 3.14;
+            var name = "John";
+            var cars = ['Audi', 'BMW', 'SUV'];//an array defined here
+            var person = { firstName: 'John', lastName: 'Smith', age: '25' };// object
+            var flag = true;
+            document.getElementById("x").innerHTML = "Variable x value is " + x;
+            document.getElementById("x").innerHTML = "Variable y value is " + y;
+            document.getElementById("pi").innerHTML = "PI value is " + Pi;
+            document.getElementById("demo").innerHTML = "My name is " + person.firstName + " " + person.lastName;
+            document.writeln("I own " + cars[1]);
+
+            console.log("Car Name:" + cars[0]);
+            console.log(" Flag type is " + typeof flag);
+
+        </script>
+    </div>
+</body>
+
+</html>

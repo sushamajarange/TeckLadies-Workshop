@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="myStyle.css">
+</head>
+
+<body>
+    <div class="content">
+        <h2>JavaScript Functions </h2>
+        <button onclick="message()">Click to see message</button>
+        <button onclick="add(100,20)">Addition</button>
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <script>
+            function message() {
+                var txt;
+                txt = "I am inside the function!..";
+                document.getElementById("demo").innerHTML = txt;
+            }
+            function add(a, b) {
+                var total;
+                total = a + b;
+                document.getElementById("demo").innerHTML = "Sum of " + a + "," + b + " is " + total;
+            }
+
+        </script>
+    </div>
+</body>
+<!-- <script>
+    var x = square(10); // caller and 10 is argument
+    document.getElementById("demo1").innerHTML = "Square of " + "10" + " is " + x;
+    function square(a) { //a is parameter 
+        let sq = a * a;
+        return sq; // return stmt used to return the value to the caller
+    }
+</script> -->
+
+</html>

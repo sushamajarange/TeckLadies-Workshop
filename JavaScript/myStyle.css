@@ -1,0 +1,14 @@
+body {
+    background-color: deepskyblue;
+    align-content: center;  }
+  h1 {
+    color: blue;
+  }
+  .content {
+    max-width: 500px;
+    margin: auto;
+  }
+
+  /* p {
+    color: red;
+  } */
